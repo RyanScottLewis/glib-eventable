@@ -6,7 +6,7 @@ module GLib
   
   # This allows you to create subclasses of `Gtk` objects in a more OOP style.
   module Eventable
-    is_versionable
+    is_versioned
     
     # Connect a signal to a method or return all connected events.
     # 
