@@ -1,4 +1,6 @@
 pkg/
+tmp/
 doc/
 .DS_Store
 .yardoc
+*.lock

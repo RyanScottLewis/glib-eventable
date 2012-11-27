@@ -24,9 +24,16 @@ spec = Gem::Specification.new do |s|
   
   s.add_dependency 'version', '~> 1.0.0'
   s.add_dependency 'glib2', '~> 1.1.5'
+  s.add_development_dependency 'at', '~> 0.1.3'
   s.add_development_dependency 'rake', '~> 0.9'
-  s.add_development_dependency 'guard-yard', '~> 2.0.1'
+  s.add_development_dependency 'gtk2', '~> 1.1.5'
+  s.add_development_dependency 'guard-rspec', '~> 2.1'
+  s.add_development_dependency 'guard-yard', '~> 2.0'
+  s.add_development_dependency 'guard-shell', '~> 0.5'
+  s.add_development_dependency 'rb-fsevent', '~> 0.9'
+  s.add_development_dependency 'fuubar', '~> 1.1'
   s.add_development_dependency 'redcarpet', '~> 2.2.2'
+  s.add_development_dependency 'github-markup', '~> 0.7'
 end
 
 require_task 'rake/version_task' do
@@ -36,11 +43,9 @@ require_task 'rake/version_task' do
   end
 end
 
-namespace :gem do
-  desc 'Generate the gemspec defined in this Rakefile'
-  task :spec do
-    Pathname.new("#{spec.name}.gemspec").open('w') { |f| f.write(spec.to_ruby) }
-  end
+desc 'Generate the gemspec defined in this Rakefile'
+task :gemspec do
+  Pathname.new("#{spec.name}.gemspec").open('w') { |f| f.write(spec.to_ruby) }
 end
 
 require 'rubygems/package_task'
@@ -49,6 +54,4 @@ Gem::PackageTask.new(spec) do |t|
   t.need_tar = false
 end
 
-task :default do
-  puts `rake -T`
-end
+task default: :gemspec
