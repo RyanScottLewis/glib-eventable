@@ -9,10 +9,11 @@ module GLib
     is_versioned
     
     # Connect a signal to a method or return all connected events.
-    # 
-    # @return [Hash] a Hash where the key is the signal and the value is the method name.
+      # 
+      # @param [{ Symbol => Symbol }] event_hash a Hash where the key is the signal and the value is the method name.
+      # @return [Hash] a Hash of all registered events where the key is the signal and the value is the method name.
     def event(event_hash=nil)
-      @events ||= {}
+      @events ||= ancestors[1].respond_to?(:events) ? ancestors[1].events.dup : {}
       return @events if event_hash.nil?
       
       raise TypeError, 'event_hash must respond to :to_hash or :to_h' unless [:to_hash, :to_h].any? { |method_name| event_hash.respond_to?(method_name) }
