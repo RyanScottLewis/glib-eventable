@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = "glib-eventable"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Scott Lewis"]
-  s.date = "2012-11-18"
+  s.date = "2012-11-27"
   s.description = "This is a helper gem for ruby-gnome2 applications that allows developers to easily connect signals to methods."
   s.email = "ryan@rynet.us"
   s.files = [".gitignore", ".rvmrc", "Gemfile", "Gemfile.lock", "Guardfile", "LICENSE", "README.md", "Rakefile", "VERSION", "glib-eventable.gemspec", "lib/glib-eventable.rb", "lib/glib/eventable.rb"]
