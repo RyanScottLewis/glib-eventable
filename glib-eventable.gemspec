@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = "glib-eventable"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Scott Lewis"]
-  s.date = "2012-11-27"
+  s.date = "2012-12-04"
   s.description = "This is a helper gem for ruby-gnome2 applications that allows developers to easily connect signals to methods."
   s.email = "ryan@rynet.us"
   s.files = [".gitignore", ".rvmrc", "Gemfile", "Guardfile", "LICENSE", "README.md", "Rakefile", "VERSION", "glib-eventable.gemspec", "lib/glib-eventable.rb", "lib/glib/eventable.rb", "spec/glib/eventable_spec.rb", "spec/spec_helper.rb", "spec/support/windows.rb"]
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<at>, ["~> 0.1.3"])
       s.add_development_dependency(%q<rake>, ["~> 0.9"])
       s.add_development_dependency(%q<gtk2>, ["~> 1.1.5"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.12"])
       s.add_development_dependency(%q<guard-rspec>, ["~> 2.1"])
       s.add_development_dependency(%q<guard-yard>, ["~> 2.0"])
       s.add_development_dependency(%q<guard-shell>, ["~> 0.5"])
@@ -37,6 +38,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<at>, ["~> 0.1.3"])
       s.add_dependency(%q<rake>, ["~> 0.9"])
       s.add_dependency(%q<gtk2>, ["~> 1.1.5"])
+      s.add_dependency(%q<rspec>, ["~> 2.12"])
       s.add_dependency(%q<guard-rspec>, ["~> 2.1"])
       s.add_dependency(%q<guard-yard>, ["~> 2.0"])
       s.add_dependency(%q<guard-shell>, ["~> 0.5"])
@@ -51,6 +53,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<at>, ["~> 0.1.3"])
     s.add_dependency(%q<rake>, ["~> 0.9"])
     s.add_dependency(%q<gtk2>, ["~> 1.1.5"])
+    s.add_dependency(%q<rspec>, ["~> 2.12"])
     s.add_dependency(%q<guard-rspec>, ["~> 2.1"])
     s.add_dependency(%q<guard-yard>, ["~> 2.0"])
     s.add_dependency(%q<guard-shell>, ["~> 0.5"])
