@@ -27,6 +27,7 @@ spec = Gem::Specification.new do |s|
   s.add_development_dependency 'at', '~> 0.1.3'
   s.add_development_dependency 'rake', '~> 0.9'
   s.add_development_dependency 'gtk2', '~> 1.1.5'
+  s.add_development_dependency 'rspec', '~> 2.12'
   s.add_development_dependency 'guard-rspec', '~> 2.1'
   s.add_development_dependency 'guard-yard', '~> 2.0'
   s.add_development_dependency 'guard-shell', '~> 0.5'
