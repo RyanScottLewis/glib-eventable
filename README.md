@@ -24,6 +24,14 @@ class Window < Gtk::Window
 end
 ```
 
+Or simply:
+
+```ruby
+class Window < Gtk::Window
+  event destroy: -> { Gtk.main_quit }
+end
+```
+
 This allows you to create subclasses of `Gtk` objects in a more OOP style.
 
 ## Install
@@ -39,13 +47,13 @@ require 'glib/eventable'
 
 class MyToggleRenderer < Gtk::CellRendererToggle
   event toggled: :on_toggle
-        
+  
   def initialize(column)
     @column = column
-          
+    
     super()
   end
-        
+  
   def on_toggle(path)
     iter = @column.tree_view.model.get_iter(path)
           
